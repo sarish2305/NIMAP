@@ -1,0 +1,5 @@
+For Category
+https://localhost:44325/CategoryCRUD/CategoryDisplayRecord
+
+For Product
+https://localhost:44325/ProductCRUD/AddProduct

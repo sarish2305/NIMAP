@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Nimap_CRUD_Operation.Models.CategoryMaster>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateCategory")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "CategoryEdit", new { id = item.CategoryID }) |
+              
+                @Html.ActionLink("Delete", "DeleteCategory", new { id = item.CategoryID })
+            </td>
+        </tr>
+    }
+
+</table>
